@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>About - Business Casual Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/business-casual.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="brand">Smart Table</div>
+    <div class="address-bar">UCF Group 34</div>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Business Casual</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li><a href="files.html">Files</a>
+                    </li>
+                    <li><a href="blog.html">Blog</a>
+                    </li>
+                    <li><a href="bio.html">Bio</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">Documents
+                    </h2>
+                    <hr>
+                </div>
+                <div class="btn-group" >
+                    <button type="button" class="btn btn-primary pdf-doc" id="Senior_Design_Confrence_G34_SmartTable.pdf">Senior Design 1 Doc</button>
+                    <button type="button" class="btn btn-primary pdf-doc" id="Senior_Design_CDR_G34_SmartTable.pdf">CDR</button>
+                    <button type="button" class="btn btn-primary pdf-doc" id="Senior_Design_1_FinalDoc_G34_SmartTable.pdf">Confrence Doc</button>
+                    <button type="button" class="btn btn-primary pdf-doc" id="Senior_Design_Divide_and_Conquer_G34_SmartTable.pdf">Divide and Conquer</button>
+                </div>
+                
+                <p><a id="pdfviewer-link" href="/doc/Senior_Design_Confrence_G34_SmartTable.pdf">click here to download the PDF file.</a></p>
+                <object id="pdfviewer" data="/doc/Senior_Design_Confrence_G34_SmartTable.pdf" type="application/pdf" width="100%" height="800px"> 
+                    <p>It appears you don't have a PDF plugin for this browser.</p>  
+                </object>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">Source Code
+                    </h2>
+                    <hr>
+                    <h3>Table Framework</h3>
+                    <p>A dump of the primary source code repository for this project.</p>
+                    <p>Includes:</p>
+                    <ul>
+                        <li>Android Controller GUI</li>
+                        <li>BMP Parser</li>
+                        <li>Emulator</li>
+                        <li>Microcontroller Project</li>
+                        <li>Windows Controller GUI</li>
+                    </ul>
+                    <samp class="small">Source: <a href="files/Table-Framework-c257fd2.zip">Table-Framework-c257fd2.zip</a>
+                        GitHub: <a href="https://github.com/jlundstrom/Table-Framework">Table-Framework</a>
+                        MD5: 912D90EE6D8B016E353D6677B232BAEB
+                        SHA256: AF33AEA05F420F3D5AC8ABA2329BD494759AE0570A63216FC4C77ABE9E6048D7</samp>
+                    <hr>
+                    
+                    <h3>Senior Design 1 Document</h3>
+                    <p>A dump of the LaTeX source code repository for the smart table.</p>
+                    <p>Includes:</p>
+                    <ul>
+                        <li>Senior Design 1 Final Documentation</li>
+                        <li>Document Images</li>
+                        <li>Uniqe Word Count Script</li>
+                    </ul>
+                    <samp class="small">Source: <a href="files/seniordesign-2f55313.zip">seniordesign-2f55313.zip</a>
+                        GitHub: <a href="https://github.com/mechnesium/seniordesign">seniordesign</a>
+                        MD5: 2FAF89833289E345CD642DBF50516358
+                        SHA256: 299CED96BEB6AFDE705483B0DC493EFAAFE0E929937BC6BB5CABF43B883ABD07</samp>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; Company 2013</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+    
+    <script type="application/javascript">
+        $('.pdf-doc').on('click', function(event) {
+            event.preventDefault(); // To prevent following the link (optional)
+            $('#pdfviewer').attr('data', '/doc/' + this.id);
+            $('#pdfviewer-link').attr('href', '/doc/' + this.id);
+        });
+    </script>
+
+</body>
+
+</html>

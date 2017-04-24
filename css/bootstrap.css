@@ -106,6 +106,9 @@ pre,
 samp {
   font-family: monospace, monospace;
   font-size: 1em;
+  white-space: pre-line;
+  word-break: normal;
+  word-wrap: normal;
 }
 button,
 input,
