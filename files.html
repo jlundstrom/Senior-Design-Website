@@ -70,8 +70,8 @@
                     <button type="button" class="btn btn-primary pdf-doc" filename="Senior_Design_Divide_and_Conquer_G34_SmartTable.pdf">Divide and Conquer</button>
                 </div>
                 
-                <p><a id="pdfviewer-link" href="/doc/Senior_Design_Confrence_G34_SmartTable.pdf">Click here to download the PDF file.</a></p>
-                <object id="pdfviewer" data="/doc/Senior_Design_Confrence_G34_SmartTable.pdf" type="application/pdf" width="100%" height="800px"> 
+                <p><a id="pdfviewer-link" href="doc/Senior_Design_Confrence_G34_SmartTable.pdf">Click here to download the PDF file.</a></p>
+                <object id="pdfviewer" data="doc/Senior_Design_Confrence_G34_SmartTable.pdf" type="application/pdf" width="100%" height="800px">
                     <p>It appears you don't have a PDF plugin for this browser.</p>  
                 </object>
                 <div class="clearfix"></div>
@@ -152,8 +152,8 @@
     <script type="application/javascript">
         $('.pdf-doc').on('click', function(event) {
             event.preventDefault(); // To prevent following the link (optional)
-            $('#pdfviewer').attr('data', '/doc/' + $(this).attr('filename'));
-            $('#pdfviewer-link').attr('href', '/doc/' + $(this).attr('filename'));
+            $('#pdfviewer').attr('data', 'doc/' + $(this).attr('filename'));
+            $('#pdfviewer-link').attr('href', 'doc/' + $(this).attr('filename'));
         });
     </script>
 
