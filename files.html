@@ -62,13 +62,15 @@
                     <hr>
                 </div>
                 <div class="btn-group" >
-                    <button type="button" class="btn btn-primary pdf-doc" id="Senior_Design_Confrence_G34_SmartTable.pdf">Senior Design 1 Doc</button>
-                    <button type="button" class="btn btn-primary pdf-doc" id="Senior_Design_CDR_G34_SmartTable.pdf">CDR</button>
-                    <button type="button" class="btn btn-primary pdf-doc" id="Senior_Design_1_FinalDoc_G34_SmartTable.pdf">Confrence Doc</button>
-                    <button type="button" class="btn btn-primary pdf-doc" id="Senior_Design_Divide_and_Conquer_G34_SmartTable.pdf">Divide and Conquer</button>
+                    <button type="button" class="btn btn-primary pdf-doc" filename="Senior_Design_Confrence_G34_SmartTable.pdf">Confrence Doc</button>
+                    <button type="button" class="btn btn-primary pdf-doc" filename="Senior_Design_2_FinalDoc_G34_SmartTable.pdf">Senior Design 2 Doc</button>
+                    <button type="button" class="btn btn-primary pdf-doc" filename="Senior_Design_Final_Presentation_G34_SmartTable.pdf">Final Presentation</button>
+                    <button type="button" class="btn btn-primary pdf-doc" filename="Senior_Design_CDR_G34_SmartTable.pdf">CDR</button>
+                    <button type="button" class="btn btn-primary pdf-doc" filename="Senior_Design_1_FinalDoc_G34_SmartTable.pdf">Senior Design 1 Doc</button>
+                    <button type="button" class="btn btn-primary pdf-doc" filename="Senior_Design_Divide_and_Conquer_G34_SmartTable.pdf">Divide and Conquer</button>
                 </div>
                 
-                <p><a id="pdfviewer-link" href="/doc/Senior_Design_Confrence_G34_SmartTable.pdf">click here to download the PDF file.</a></p>
+                <p><a id="pdfviewer-link" href="/doc/Senior_Design_Confrence_G34_SmartTable.pdf">Click here to download the PDF file.</a></p>
                 <object id="pdfviewer" data="/doc/Senior_Design_Confrence_G34_SmartTable.pdf" type="application/pdf" width="100%" height="800px"> 
                     <p>It appears you don't have a PDF plugin for this browser.</p>  
                 </object>
@@ -96,9 +98,24 @@
                     <samp class="small">Source: <a href="files/Table-Framework-c257fd2.zip">Table-Framework-c257fd2.zip</a>
                         GitHub: <a href="https://github.com/jlundstrom/Table-Framework">Table-Framework</a>
                         MD5: 912D90EE6D8B016E353D6677B232BAEB
-                        SHA256: AF33AEA05F420F3D5AC8ABA2329BD494759AE0570A63216FC4C77ABE9E6048D7</samp>
+                        SHA1: 3D308179BA3232F354CFE0A604FC0F926B55B147
+                    </samp>
                     <hr>
                     
+                    <h3>Senior Design 2 Document</h3>
+                    <p>A dump of the LaTeX source code repository for the smart table.</p>
+                    <p>Includes:</p>
+                    <ul>
+                        <li>Senior Design 2 Final Documentation</li>
+                        <li>Document Images</li>
+                        <li>Uniqe Word Count Script</li>
+                    </ul>
+                    <samp class="small">Source: <a href="files/seniordesign-?????.zip">seniordesign-?????.zip</a>
+                        GitHub: <a href="https://github.com/mechnesium/seniordesign">seniordesign</a>
+                        MD5: ???????
+                        SHA1: ????????????????????????????????????????
+                    </samp>
+                    <hr>
                     <h3>Senior Design 1 Document</h3>
                     <p>A dump of the LaTeX source code repository for the smart table.</p>
                     <p>Includes:</p>
@@ -108,9 +125,10 @@
                         <li>Uniqe Word Count Script</li>
                     </ul>
                     <samp class="small">Source: <a href="files/seniordesign-2f55313.zip">seniordesign-2f55313.zip</a>
-                        GitHub: <a href="https://github.com/mechnesium/seniordesign">seniordesign</a>
+                        GitHub: <a href="https://github.com/mechnesium/seniordesign/tree/2f55313ea1fdf47af50d40516489bfd2584bbe4d">seniordesign</a>
                         MD5: 2FAF89833289E345CD642DBF50516358
-                        SHA256: 299CED96BEB6AFDE705483B0DC493EFAAFE0E929937BC6BB5CABF43B883ABD07</samp>
+                        SHA1: F97F5B0030703119DA4FD248411E91A12E809147
+                    </samp>
                 </div>
             </div>
         </div>
@@ -134,8 +152,8 @@
     <script type="application/javascript">
         $('.pdf-doc').on('click', function(event) {
             event.preventDefault(); // To prevent following the link (optional)
-            $('#pdfviewer').attr('data', '/doc/' + this.id);
-            $('#pdfviewer-link').attr('href', '/doc/' + this.id);
+            $('#pdfviewer').attr('data', '/doc/' + $(this).attr('filename'));
+            $('#pdfviewer-link').attr('href', '/doc/' + $(this).attr('filename'));
         });
     </script>
 
