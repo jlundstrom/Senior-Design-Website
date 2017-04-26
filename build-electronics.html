@@ -59,14 +59,22 @@
                     <h2 class="intro-text text-center">The <strong>Electronics</strong>
                     </h2>
                     <hr>
-                    <a class="img-expand-button" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img class="img-responsive img-border img-left img-expandable" src="img/intro-tetris.jpg" expand ="img/intro-tetris.jpg" alt=""></a>
-                    <hr class="visible-xs">
+                    <figure class="col-sm-4 figure">
+                        <a class="img-expand-button" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img class="img-responsive figure-img img-fluid rounded img-expandable" src="img/build/thumbs/22.jpg" expand ="img/build/22.jpg" alt=""></a>
+                        <figcaption class="figure-caption">Final Printed Circuit Board</figcaption>
+                    </figure>
 
-                    <p>This project is to design a table that would have a moderately sized matrix of individual cells on the top that would act as pixels. Each so called cell would consist of an RGB Led to produce any given color value which would likely be achieved through pulse width modification. Each cell would also have a LED driver that would act as a slave to a main microprocessor on another main board. Including functionality like Timekeeping, various idling modes,and playing games such as “Snake”.</p>
+                    <p>Various deviations were made upon completing the initial prototype build early in Senior Design II. Upon completion of the first batch of code and the first PCB, several issues were noted and resolved. The notes of such changes are listed in this section, along with commentary regarding the requisite changes. There were also several connections to the microcontroller that needed to be made that were not made. These connections were prescribed by the data sheet that were missed on the first rev. These changes were not necessary upon further inspection, but were recommended so it was decided to make them in board two. Along with the changes that were made according to the various microcontroller pins, there was also a mistake in the wiring from the Bluetooth module to the microcontroller, which was fixed rather quickly.</p>
 
-                    <p>This device will not necessarily be designed with inherent market value in mind. The device will have relatively cheap production cost, however the primary motivation for designing the product is simply as an academic exercise in an effort to improve the member’s understanding of integration across various subsystem. This is a proof of concept design that has potential to extend into the market in future renovations, if a highly practical concept is prepared.</p>
+                    <h3>Schematic and PCB Design</h3>
+                    <p>The schematic is shown as follows, which as discussed above has various deviations, most notably the removal of the various headers that were initially intended to supply the LED matrix, but it was decided after rev 1 to simply have the 5V supply directly feed the matrix. The schematic also includes the new level converter, which is valuable in converting the 3.3V to 5V quickly. This was initially a problem where the standard level converter with MOSFETs was giving us some issues, the TI solution rectified the problem immediately.</p>
 
-                    <p>The total size of the table will be relatively large, based solely on the scope of the display. As the display is consisting of 512 individual LEDs the final design of this project ended up being the size of a coffee table with an array of 32 * 16 LEDs.</p>
+                    <p>Lastly, the board layout reflects the changes in the schematic, the relative size remains the same while adding several features. The second Bluetooth  module can be found under the first Bluetooth module, and the headers are removed from the perimeter of the board, making the overall size thinner. </p>
+
+                    <h3>Power Supply Design</h3>
+                    <p>Primarily, the major concern from a hardware standpoint was a problem with heat dissipation. In the first board rev, the decision was naively made to step the DC voltage down after regulation from 28VDC down to 6VDC. This was a bad choice, simply due to pure power dissipation in the regulator. As can be seen in the   calculations made in the final presentation given for the conclusion of Senior Design II. The basic power calculations in the old rev lead to a dissipation of 11.4W, which results in a whopping 57 degree Celsius increase in temperature. This was far too hot, and actually led to regulator shutdowns as well as a scathingly hot regulator.</p>
+                    <p>If I were to restart the project at this time, there are a few changes that could be changed in order to rectify several problems that we had as a team. First of all, the 5V power supply is strong enough to supply both the LED matrix as well as the micro and Bluetooth modules. In the current revision, it is set up so that the power supplies are separated and a 5V supply enters the supply separately through a completely different header. This problem could be simplified by just using the 5V header for everything. This also removes the heat problem of the regulator in the system. It actually removes the problem regulator entirely; the 3.3V and 1.2V regulator is more than enough.</p>
+                    <p>Other problems that were addressed through the course of the semester that I would re implement include bypassing the board with the 5V supply for everything but level conversion. The board still needs the 5V for communication, but any power that runs to the LED matrix needs to run direct to the matrix.</p>
                 </div>
             </div>
         </div>
@@ -81,13 +89,23 @@
                 </div>
 
                 <div class="col-sm-3">
-                    <a class="img-expand-button" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img class="img-responsive img-border img-expandable" src="img/slide-4.jpg" expand ="img/slide-3.jpg" alt=""></a>
+                    <figure class="figure">
+                        <a class="img-expand-button" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img class="img-responsive figure-img img-fluid rounded img-expandable" src="img/build/thumbs/23.jpg" expand="img/build/23.png" alt=""></a>
+                        <figcaption class="figure-caption">Final Power and Data Flowchart</figcaption>
+                    </figure>
                 </div>
 
                 <div class="col-sm-3">
                     <figure class="figure">
-                        <a class="img-expand-button" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img class="img-responsive figure-img img-fluid rounded img-expandable" src="img/slide-2.jpg" expand ="img/slide-2.jpg" alt=""></a>
-                        <figcaption class="figure-caption">A caption for the above image.</figcaption>
+                        <a class="img-expand-button" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img class="img-responsive figure-img img-fluid rounded img-expandable" src="img/build/thumbs/24.jpg" expand="img/build/24.png" alt=""></a>
+                        <figcaption class="figure-caption">Final Schematic</figcaption>
+                    </figure>
+                </div>
+
+                <div class="col-sm-3">
+                    <figure class="figure">
+                        <a class="img-expand-button" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img class="img-responsive figure-img img-fluid rounded img-expandable" src="img/build/thumbs/25.jpg" expand="img/build/25.png" alt=""></a>
+                        <figcaption class="figure-caption">Final Layout</figcaption>
                     </figure>
                 </div>
 
