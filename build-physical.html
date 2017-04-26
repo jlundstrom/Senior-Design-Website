@@ -81,12 +81,15 @@
                 </div>
 
                 <div class="col-sm-3">
-                    <a class="img-expand-button" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img class="img-responsive img-border img-left img-expandable" src="img/slide-4.jpg" expand ="img/slide-3.jpg" alt=""></a>
+                    <a class="img-expand-button" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img class="img-responsive img-border img-expandable" src="img/slide-4.jpg" expand ="img/slide-3.jpg" alt=""></a>
                 </div>
 
+                <figure class="figure">
                 <div class="col-sm-3">
-                    <a class="img-expand-button" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img class="img-responsive img-border img-left img-expandable" src="img/slide-2.jpg" expand ="img/slide-2.jpg" alt=""></a>
+                    <a class="img-expand-button" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img class="img-responsive figure-img img-fluid rounded img-expandable" src="img/slide-2.jpg" expand ="img/slide-2.jpg" alt=""></a>
+                    <figcaption class="figure-caption">A caption for the above image.</figcaption>
                 </div>
+                </figure>
 
                 <div class="clearfix"></div>
             </div>
@@ -139,7 +142,7 @@
             } else {
                 s = '<div class="item img-expanded"';
             }
-            s += '><img class="img-responsive img-full" src="' + $(val).attr('expand') + '"></div>';
+            s += '><img class="img-responsive img-full" src="' + $(val).attr('expand') + '"><p>' + $(val).parent().siblings('.figure-caption').text() + '</p></div>';
             $(val).attr('expand-id', i);
             $('#main-carousel').append(s)
         });
@@ -147,7 +150,7 @@
         $('.img-expand-button').on('click', function(event) {
             event.preventDefault(); // To prevent following the link (optional)
 
-            var targetID = $(this.firstElementChild).attr('expand-id')
+            var targetID = $(this).find('img').attr('expand-id')
             $.each($('.img-expanded'), function(i, val){
                 if(i == targetID)
                 {
