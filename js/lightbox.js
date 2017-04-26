@@ -1,4 +1,3 @@
-
 $.each($('.img-expandable'), function (i, val) {
     "use strict";
     var s = '';
