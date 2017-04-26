@@ -59,14 +59,55 @@
                     <h2 class="intro-text text-center">The <strong>Application</strong>
                     </h2>
                     <hr>
-                    <a class="img-expand-button" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img class="img-responsive img-border img-left img-expandable" src="img/intro-tetris.jpg"expand="img/intro-tetris.jpg" alt=""></a>
-                    <hr class="visible-xs">
 
-                    <p>This project is to design a table that would have a moderately sized matrix of individual cells on the top that would act as pixels. Each so called cell would consist of an RGB Led to produce any given color value which would likely be achieved through pulse width modification. Each cell would also have a LED driver that would act as a slave to a main microprocessor on another main board. Including functionality like Timekeeping, various idling modes,and playing games such as “Snake”.</p>
+                    <p>Originally slated for the smart table was a very limited number of games and applications, namely time, date, weather, and "Snake." The original intent of the table was for it to be a digital information platform. However, the developers discovered that the multicolor display left a lot of room for creativity, which invited for vibrant and colorful applications such as arcade-style video games and animations. Thus, the vision of the smart table transformed into that of a game and multimedia table.</p>
 
-                    <p>This device will not necessarily be designed with inherent market value in mind. The device will have relatively cheap production cost, however the primary motivation for designing the product is simply as an academic exercise in an effort to improve the member’s understanding of integration across various subsystem. This is a proof of concept design that has potential to extend into the market in future renovations, if a highly practical concept is prepared.</p>
+                    <h3 class="text-center">Demo Application</h3>
+                    <hr>
+                    <figure class="col-sm-3 figure">
+                        <a class="img-expand-button" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img class="img-responsive figure-img img-fluid rounded img-expandable" src="img/party_menu.png" expand="img/party_menu.png" alt=""></a>
+                        <figcaption class="figure-caption">Final Printed Circuit Board</figcaption>
+                    </figure>
+                    <figure class="col-sm-3 figure">
+                        <a class="img-expand-button" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img class="img-responsive figure-img img-fluid rounded img-expandable" src="img/party_app.png" expand="img/party_app.png" alt=""></a>
+                        <figcaption class="figure-caption">Final Printed Circuit Board</figcaption>
+                    </figure>
+                    <p>The final software implementation of the smart table included a host of games and demo applications. As shown in the figure the visual appearance of the selected demo applications "party mode." The left column of images shows the menu entry of the demos, and the right column of the image shows the runtime behavior of the selected demo. The demo applications were included to emphasize the hardware and software capabilities of the smart table without requiring significant user input.</p>
 
-                    <p>The total size of the table will be relatively large, based solely on the scope of the display. As the display is consisting of 512 individual LEDs the final design of this project ended up being the size of a coffee table with an array of 32 * 16 LEDs.</p>
+                    <h4>Conway's Game of Life</h4>
+                    <p>This is a simple zero-player game which only requires the inital seeding to "play". As the app is designed, there are presets able to be used or the user and define the seed manually with the controller.</p>
+
+                    <h4>Clock Display</h4>
+                    <p>This application takes in time data from the external android controller and displays the time.</p>
+
+                    <h4>Party Mode</h4>
+                    <p>This application is mostly a proof of concept of using a gif and displaying it. The gif is split into separate bitmaps and is parsed externally before being included into the microcontroller. This possibly could be expanded to on chip parsing if SD card support was added.</p>
+
+                    <h4>Cloud Display</h4>
+                    <p>This application uses a noise generation application to generate its output. The user can control the functions hue, "zoom factor", and base brightness level. The function being used is a turbulence function that is used to procedurally draw clouds. </p>
+
+                    <h3 class="text-center">Game Applications</h3>
+                    <hr>
+                    <p>Among the other applications included on the smart table are a variety of single-player and two-player games. These games were designed with user interactivity and engagement in mind, and make heavy use of user input. They include Snake, Block Drop, Tron, Go, and Space Invaders, and a detailed discussion of each game can be found below.</p>
+
+                    <h4>Snake</h4>
+                    <p>This is the standard "Snake" game, in which the player controls a snake that grows after eating food. The food is placed in a random spot and the player dies if the snake intersects itself or crosses into a wall. This game is only single player but is expandable to two player.</p>
+
+                    <h4>Block Drop</h4>
+                    <p>This is a "Tetris" clone and supports two players. Implemented is scoring keeping, next block, and adding in a second player in the middle of the game.</p>
+
+                    <h4>Tron</h4>
+                    <p>This game is essentially the Tron lightcycle racing and is strictly two player. The objective of this game is to force the other player to impact into a wall or the trail your "lightcycle" leaves behind it.</p>
+
+                    <h4>Go</h4>
+                    <p>This game is also known as Chinese checkers. The board implemented is the standard 13x13 training board size. The game does support checking for valid moves and gives visual clues for the player's turn. This game additionally is strictly two-player.</p>
+
+                    <h4>Space Invaders</h4>
+                    <p>This is a "proof of concept" game, it is roughly a clone of "Space invaders with a hint of Galaga". This game demonstrates the possibly of using pixel art, various animations, complex layered drawing, and complex hit detection. This is a strictly single player game, and shows the potential of larger scaled games being implemented on the framework. </p>
+
+                    <h3 class="text-center">Future Improvements</h3>
+                    <hr>
+                    <p>Future design iterations includes: optimizing the downtime caused by the "waiting for frame to draw" by using double buffering, offloading expensive computations such as noise to the second core, switching the bluetooth polling over to interrupt driven, and cleaning the code in the apps as some are "proof of concept". As such this implementation has a number of shortcuts taken due to time constraints.</p>
                 </div>
             </div>
         </div>
@@ -81,12 +122,12 @@
                 </div>
 
                 <div class="col-sm-3">
-                    <a class="img-expand-button" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img class="img-responsive img-border img-expandable" src="img/slide-4.jpg"expand="img/slide-3.jpg" alt=""></a>
+                    <a class="img-expand-button" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img class="img-responsive img-border img-expandable" src="img/slide-4.jpg" expand="img/slide-3.jpg" alt=""></a>
                 </div>
 
                 <div class="col-sm-3">
                     <figure class="figure">
-                        <a class="img-expand-button" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img class="img-responsive figure-img img-fluid rounded img-expandable" src="img/slide-2.jpg"expand="img/slide-2.jpg" alt=""></a>
+                        <a class="img-expand-button" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img class="img-responsive figure-img img-fluid rounded img-expandable" src="img/slide-2.jpg" expand="img/slide-2.jpg" alt=""></a>
                         <figcaption class="figure-caption">A caption for the above image.</figcaption>
                     </figure>
                 </div>
