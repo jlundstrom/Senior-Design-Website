@@ -63,6 +63,16 @@
                     <hr class="visible-xs">
 
                     <p>To speed up software development an emulator was written that takes the project's code as an input. The emulator outputs the various functions of the written software for the microcontroller and additionally takes in keyboard inputs for the substitute bluetooth controls. This tool ended being invaluable for rapid expansion of the app codebase and functional checks of various lower level function calls.</p>
+
+                    <p>The code base is organized in such a way that platform specific code is only used in two different locations. Only the display driving and input code is allowed to be platform specific. This allows for the creation of helper functions that control the system state. The hardware specific components can be called to initialize platform specific components, and polled if the system is not interrupt driven. This opened up the opportunity to create a 16 color console emulator, full color OpenGL emulator, and the microcontroller specific version.</p>
+
+                    <h3>Display Driving</h3>
+                    <p>There have been two revisions of the emulator. The first emulator was created as a proof of concept and as a tool to unblock anyone who wanted to start development on applications. This version was a console application, and could represent 16 different colors. The color shown was based on a closest fit. The input also polled the OS for currently held keys and updated the input variables based on the result. This was sufficient for a while.</p>
+
+                    <p>As application development got more complicated so did the requirements to emulate it. As we added animations, and sprites we need to try and get a closer color representation. This is the time we started to implement OpenGL in the Visual C++ framework. Visual C++ supports the C99 standard used by the Ti compiler allowing for a nearly seamless integration.</p>
+
+                    <p>The Visual Studios project included references the source files in the Code Composer Studios project. Therefore regardless of how you modify the file it reflects on both systems.</p>
+
                 </div>
             </div>
         </div>
