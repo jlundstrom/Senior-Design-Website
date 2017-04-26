@@ -60,14 +60,25 @@
                     </h2>
                     <hr>
                     <a class="img-expand-button" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img class="img-responsive img-border img-left img-expandable" src="img/intro-tetris.jpg" expand ="img/tennisfull.jpg" alt=""></a>
-					<figcaption class="figure-caption">Finished table design with tetris displayed on the screen</figcaption>
                     <hr class="visible-xs">
 
                     <p>This project is to design a table that would have a moderately sized matrix of individual cells on the top that would act as pixels. Each so called cell would consist of an RGB Led to produce any given color value which would likely be achieved through pulse width modification. Each cell would also have a LED driver that would act as a slave to a main microprocessor on another main board. Including functionality like Timekeeping, various idling modes,and playing games such as “Snake”.</p>
 
-                    <p>This device will not necessarily be designed with inherent market value in mind. The device will have relatively cheap production cost, however the primary motivation for designing the product is simply as an academic exercise in an effort to improve the member’s understanding of integration across various subsystem. This is a proof of concept design that has potential to extend into the market in future renovations, if a highly practical concept is prepared.</p>
+                    <p>A quick overview of the base design materials is; made out of 7/32 3-layer birch plywood,
+						laser cut, and diffuser on-top. The main design process followed (find a real-life reference) -> (find an accept-
+						able way to integrate the LED’s into the design) -> (revise/repeat), the end result after
+						multiple iterations is shown in the gallery. This design was done using Sketchup, and the
+						overall design was driven by the concept of integrating the LED dividers into the table
+						itself, thus resulting in this design. After the model was completed, it was further split
+						up into separate "jobs" and thus was all laser cut with some additional pieces added in
+						as a buffer for future accidents.
+					</p>
 
-                    <p>The total size of the table will be relatively large, based solely on the scope of the display. As the display is consisting of 512 individual LEDs the final design of this project ended up being the size of a coffee table with an array of 32 * 16 LEDs.</p>
+                    <p> the table uses WS2812 based LEDs for both cost, and ease of implementation. 
+						The final design uses 16 strips of 32 LEDs each with power lines for every
+						64 LEDs and one continuous data line. The LEDs were attached to a backboard that
+						was inserted into the table.
+					</p>
                 </div>
             </div>
         </div>
